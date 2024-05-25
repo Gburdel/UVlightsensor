@@ -17,19 +17,7 @@ The UV sensor assembly mounted inside a plastic "black box" with an OLED display
 
 The Sparkfun UV sensor seen on the top, https://www.sparkfun.com/products/23517 or https://www.amazon.com/dp/B0CQHQTQ8R?psc=1&ref=ppx_yo2ov_dt_b_product_details and the QWIIC Pocket Development Board on the bottom, https://www.sparkfun.com/products/22925 or https://www.amazon.com/dp/B0CL6GGT7Q?psc=1&ref=ppx_yo2ov_dt_b_product_details can be bolted together using standoffs. Note: Sparkfun only has free shipping for a $100 order. In this bare board only configuration a USB cable is required for power. The USB cable can print sensor data over the USB virtual serial port to a PC running a terminal application program such as the serial monitor in the Arduino IDE, TeraTerm, or RealTerm. I prefer plastic standoffs and screws to avoid the possiblitly of larger screws shorting things out on the PCB. I found this standoff set handy https://www.amazon.com/dp/B0B5LTQXX8?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
-## Using Sparkfun Qwiic cables to connect sensor modules to processor modules
 
-![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/2b331aa1-8549-415f-8748-a9a7e211efd0)
-
-Sparkfun makes handy 4-wire cables to connect the modules https://www.sparkfun.com/search/results?term=QWiic+cables or https://www.amazon.com/dp/B08HQ1VSVL?psc=1&ref=ppx_yo2ov_dt_b_product_details. I used a short one to connect the sensor module to the ESP32 module. A second Qwiic cable with female jumpers was used to connect to the pins on the OLED https://www.sparkfun.com/products/17261.
-The cable wires have been color coded to red, black, blue and yellow. Additionally, the female Qwiic connector features a basic 1mm pitch, while the female hookup pins can easily connect to a standard 0.1" male connector.
-
-All Qwiic cables have the following color scheme and arrangement:
-
-- Black = GND
-- Red = 3.3V DC
-- Blue = SDA (I2C data signal)
-- Yellow = SCL (I2C clock)
 
 # Adding an OLED display for standalone operation
 
@@ -52,6 +40,19 @@ View inside the black box case. Note the small lithium battery on the right. The
 # Hardware Assembly 
 A short Qwiic cable attaches the sensor board to the processor board. You also to solder one jumper wire from UV sensor board INT (interrupt pin) to the processor board IO4 pin as the UV sensor code example uses pin 4 for the interrupt (the sensor sets an interrupt signal when a new value is available - the program will crash without this wire!). You will also need a USB C cable (if you don’t have one – one does not come with the processor board). Optional Standoffs, nuts and bolts if you want to attach the two boards. The female Qwiic cable is used to attach from the sensor board's second Qwiic connector to the pins on the OLED.
 
+## Using Sparkfun Qwiic cables to connect sensor modules to processor modules
+
+![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/2b331aa1-8549-415f-8748-a9a7e211efd0)
+
+Sparkfun makes handy 4-wire cables to connect the modules https://www.sparkfun.com/search/results?term=QWiic+cables or https://www.amazon.com/dp/B08HQ1VSVL?psc=1&ref=ppx_yo2ov_dt_b_product_details. I used a short one to connect the sensor module to the ESP32 module. A second Qwiic cable with female jumpers was used to connect to the pins on the OLED https://www.sparkfun.com/products/17261.
+The cable wires have been color coded to red, black, blue and yellow. Additionally, the female Qwiic connector features a basic 1mm pitch, while the female hookup pins can easily connect to a standard 0.1" male connector. The pins are labeled on one side of the OLED.
+
+All Qwiic cables have the following color scheme and arrangement:
+
+- Black = GND
+- Red = 3.3V DC
+- Blue = SDA (I2C data signal)
+- Yellow = SCL (I2C clock)
 # Software Development
 Install the Arduino IDE on your PC and then using Board Manager add the ExpressIf ESP32 board package so that the IDE has support that allows you to select the “SparkFun Qwiic Pocket Development Board - ESP32-C6” as your board. Once the board is selected, pick the COM port to use. See https://docs.sparkfun.com/SparkFun_Qwiic_Pocket_Dev_Board_ESP32_C6/software_setup/ for more details. Then you need to install the libraries (use Tools-> Manage Libraries) search for and install the "Sparkfun UV sensor AS7331" and if you are adding the OLED install the "Sparkfun QWIIC OLED" library. 
 The example code prints data to the USB virtual serial port, but when no USB cable is attached the Serial function hangs. If you are running standalone with an OLED and battery with no USB cable attached, under Tools disable the "USB CDC on boot" option, then compile and download.
