@@ -12,6 +12,19 @@ The UV sensor assembly mounted inside a "black box" with an OLED display, batter
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/f127e40c-00cd-446c-9e9d-424988e7fd5d)
 
 The Sparkfun UV sensor, https://www.sparkfun.com/products/23517 or https://www.amazon.com/dp/B0CQHQTQ8R?psc=1&ref=ppx_yo2ov_dt_b_product_details and the QWIIC Pocket Development Board, https://www.sparkfun.com/products/22925 or https://www.amazon.com/dp/B0CL6GGT7Q?psc=1&ref=ppx_yo2ov_dt_b_product_details can be bolted together using standoffs. Note: Sparkfun only has free shipping for a $100 order. In this bare board only configuration a USB cable is required for power. The USB cable can print sensor data over the USB virtual serial port to a PC running a terminal application program such as the serial monitor in the Ardruino IDE, TeraTerm, or RealTerm. I prever plastic standoffs and screws to avoid the posiblitly of larger screws shorting things out on the PCB. I found this standoff set handy https://www.amazon.com/dp/B0B5LTQXX8?psc=1&ref=ppx_yo2ov_dt_b_product_details
+# Qwiic cables to connect modules
+
+![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/9465adaf-5dca-4cff-97d7-318f5d29a59d)
+
+Sparkfun makes handy 4-wire cables to connect the modules. I used a short one to connect the sensor module to the ESP32 module. A second Qwiic cable with female jumpers was used to connect to the pins on the OLED.
+The cable wires have been color coded to red, black, blue and yellow. Additionally, the female Qwiic connector features a basic 1mm pitch, while the female hookup pins can easily connect to a standard 0.1" male connector.
+
+All Qwiic cables have the following color scheme and arrangement:
+
+Black = GND
+Red = 3.3V
+Blue = SDA
+Yellow = SCL
 
 # Adding an OLED display for standalone operation
 
