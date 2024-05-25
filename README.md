@@ -39,11 +39,18 @@ Black = GND
 
 Note the OLED module comes set with a jumper to use I2C address 0x3C (and not 0x3D like Sparkfun's out of stock OLED). It works using the Sparkfun Qwicc OLED library driver once the address is changed. I had to carefully enlarge the mounting holes a bit in the OLED and add a small spacer to keep pressure off of the glass. Be careful, the glass is very thin and it is easy to crack the glass and destroy the OLED it you put pressure on it.
 
+# Mounting the Parts in a Case
+
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/cb358408-6615-45a0-9e63-4a8c9b5b8d40)
 
-# Mounting the Parts in a Case
+
 View inside the black box case. Note the small lithium battery on the right. The battery was attached using sticky back velcro.  It comes with a JST connector that plugs into the ESP32 module. The module includes a charger circuit and it will automaticaly charge the small lithuim battery when a USB C cable is attached (and the power switch is on). The power switch is on the left side of the case.
 
+# Hardware Assembly 
+The Qwiic cable attaches the sensor board to the processor board. I also had to solder one jumper wire from sensor board INT (interrupt pin) to the processor board IO4 pin and changed the UV sensor code example to use pin 4 instead of pin 26 (26 was for a different processor board) for the interrupt (the sensor sets an interrupt signal when a new value is available - the program will crash without this wire!). You will need a short Qwiic cable and a USB C cable (if you don’t have one – one does not come with the processor board). Optional Standoffs, nuts and bolts if you want to attach the two boards.
 
- 
+# Software Development
+Install the Arduino IDE on your PC and then using Board Manager add the ExpressIf ESP32 board package so that the IDE has support that allows you to select the “SparkFun Qwiic Pocket Development Board - ESP32-C6” as your board. Once the board is selected, pick the COM port to use. Then you need to install the library for the "Sparkfun UV sensor AS7331" and if you are adding the OLED install the "Sparkfun QWIIC OLED" library. 
+The example code prints data to the USB virtual serial port, but when no USB cable is attached the Serial function hangs. If you are running standalone with an OLED and battery with no USB cable attached, under Tools disable the "USB CDC on boot" option, then compile and download.
+
  
