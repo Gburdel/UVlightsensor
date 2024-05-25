@@ -24,7 +24,7 @@ The Sparkfun UV sensor seen on the top, https://www.sparkfun.com/products/23517 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/3e799224-9420-40f1-9954-2e2ffc695200)
 
 
-128x64 Pixel SSD1306 blue OLED from Amazon https://www.amazon.com/dp/B0BFD4X6YV?ref=ppx_yo2ov_dt_b_product_details&th=1
+Sparkfun has a Qwicc OLED but it is on backorder https://www.sparkfun.com/products/23453 . Similar devices that work with the software are available elsewhere at a lower cost. This one is a 128x64 Pixel SSD1306 blue OLED from Amazon https://www.amazon.com/dp/B0BFD4X6YV?ref=ppx_yo2ov_dt_b_product_details&th=1
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/2a1cd0b9-9849-424d-a095-bf7439b44d42)
 
