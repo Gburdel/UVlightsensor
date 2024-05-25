@@ -1,7 +1,7 @@
 # UVlightsensor
 Ultraviolet UVA, UVB, and UVC Light Sensor
 
-For about the same price as a UV flashlight, you can build a UV light sensor that measures UV light output at the three standard UVA (LW) UVB (MW) and UVC (SW) wavelengths. Begining level knowledge of electronics and microprocessors is required. The Arduino IDE is used to program the ESP32 processor module via a USB C cable. All code is provided, but the IDE must be used to compile and upload the code to the processor. Soldering of one wire is required, but other parts plug together using Qwiic cable connectors.
+For about the same price as a UV flashlight, you can build a UV light sensor that measures UV light output at the three standard UVA (LW) UVB (MW) and UVC (SW) wavelengths. Beginning level knowledge of electronics and microprocessors is required. The Arduino IDE is used to program the ESP32 processor module via a USB C cable. All code is provided, but the IDE must be used to compile and upload the code to the processor. Soldering of one wire is required, but other parts plug together using Qwiic cable connectors.
 
 # A battery powered version with an OLED display
 
@@ -13,7 +13,7 @@ The UV sensor assembly mounted inside a plastic "black box" with an OLED display
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/f127e40c-00cd-446c-9e9d-424988e7fd5d)
 
-The Sparkfun UV sensor seen on the top, https://www.sparkfun.com/products/23517 or https://www.amazon.com/dp/B0CQHQTQ8R?psc=1&ref=ppx_yo2ov_dt_b_product_details and the QWIIC Pocket Development Board on the bottom, https://www.sparkfun.com/products/22925 or https://www.amazon.com/dp/B0CL6GGT7Q?psc=1&ref=ppx_yo2ov_dt_b_product_details can be bolted together using standoffs. Note: Sparkfun only has free shipping for a $100 order. In this bare board only configuration a USB cable is required for power. The USB cable can print sensor data over the USB virtual serial port to a PC running a terminal application program such as the serial monitor in the Ardruino IDE, TeraTerm, or RealTerm. I prever plastic standoffs and screws to avoid the posiblitly of larger screws shorting things out on the PCB. I found this standoff set handy https://www.amazon.com/dp/B0B5LTQXX8?psc=1&ref=ppx_yo2ov_dt_b_product_details
+The Sparkfun UV sensor seen on the top, https://www.sparkfun.com/products/23517 or https://www.amazon.com/dp/B0CQHQTQ8R?psc=1&ref=ppx_yo2ov_dt_b_product_details and the QWIIC Pocket Development Board on the bottom, https://www.sparkfun.com/products/22925 or https://www.amazon.com/dp/B0CL6GGT7Q?psc=1&ref=ppx_yo2ov_dt_b_product_details can be bolted together using standoffs. Note: Sparkfun only has free shipping for a $100 order. In this bare board only configuration a USB cable is required for power. The USB cable can print sensor data over the USB virtual serial port to a PC running a terminal application program such as the serial monitor in the Arduino IDE, TeraTerm, or RealTerm. I prefer plastic standoffs and screws to avoid the possiblitly of larger screws shorting things out on the PCB. I found this standoff set handy https://www.amazon.com/dp/B0B5LTQXX8?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
 # Using Sparkfun Qwiic cables to connect sensor modules to processor modules
 
@@ -37,14 +37,14 @@ All Qwiic cables have the following color scheme and arrangement:
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/3e799224-9420-40f1-9954-2e2ffc695200)
 
-Note the OLED module comes set with a jumper to use I2C address 0x3C (and not 0x3D like Sparkfun's out of stock OLED). It works using the Sparkfun Qwicc OLED library driver once the address is changed. I had to carefully enlarge the mounting holes a bit in the OLED and add a small spacer to keep pressure off of the glass. Be careful, the glass is very thin and it is easy to crack the glass and destroy the OLED if you put pressure on it.
+Note the OLED module comes set with a jumper to use I2C address 0x3C (and not 0x3D like Sparkfun's out of stock OLED). It works using the Sparkfun Qwiic OLED library driver once the address is changed. I had to carefully enlarge the mounting holes a bit in the OLED and add a small spacer to keep pressure off of the glass. Be careful, the glass is very thin and it is easy to crack the glass and destroy the OLED if you put pressure on it.
 
 # Mounting the Parts in a Case
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/cb358408-6615-45a0-9e63-4a8c9b5b8d40)
 
 
-View inside the black box case. Note the small lithium battery on the right. The battery was attached using sticky back velcro.  It comes with a JST connector that plugs into the ESP32 module. The module includes a charger circuit and it will automaticaly charge the small lithuim battery when a USB C cable is attached (and the power switch is on). The power switch is on the left side of the case.
+View inside the black box case. Note the small lithium battery on the right. The battery was attached using sticky back Velcro.  It comes with a JST connector that plugs into the ESP32 module. The module includes a charger circuit, and it will automatically charge the small lithium battery when a USB C cable is attached (and the power switch is on). The power switch is on the left side of the case.
 
 # Hardware Assembly 
 A short Qwiic cable attaches the sensor board to the processor board. You also to solder one jumper wire from UV sensor board INT (interrupt pin) to the processor board IO4 pin as the UV sensor code example uses pin 4 for the interrupt (the sensor sets an interrupt signal when a new value is available - the program will crash without this wire!). You will need a short Qwiic cable and a USB C cable (if you don’t have one – one does not come with the processor board). Optional Standoffs, nuts and bolts if you want to attach the two boards. The female Qwiic cable is used to attach from the sensor board's second Qwiic connector to the pins on the OLED.
