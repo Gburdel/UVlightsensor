@@ -42,6 +42,8 @@ Note the OLED module comes set with a jumper to use I2C address 0x3C (and not 0x
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/cb358408-6615-45a0-9e63-4a8c9b5b8d40)
 
 # Mounting the Parts in a Case
-View inside the black box case. Note the small lithium battery on the right.  It comes with a JST connector that plugs into the ESP32 module. The module includes a charger circuit and it will automaticaly charge the small lithuim battery when a USB C cable is attached (and the power switch is on. The power switch is on the left side of the case.
+View inside the black box case. Note the small lithium battery on the right. The battery was attached using sticky back velcro.  It comes with a JST connector that plugs into the ESP32 module. The module includes a charger circuit and it will automaticaly charge the small lithuim battery when a USB C cable is attached (and the power switch is on). The power switch is on the left side of the case.
+
+
  
  
