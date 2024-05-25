@@ -16,7 +16,7 @@ The Sparkfun UV sensor, https://www.sparkfun.com/products/23517 or https://www.a
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/2b331aa1-8549-415f-8748-a9a7e211efd0)
 
-Sparkfun makes handy 4-wire cables to connect the modules. I used a short one to connect the sensor module to the ESP32 module. A second Qwiic cable with female jumpers was used to connect to the pins on the OLED.
+Sparkfun makes handy 4-wire cables to connect the modules https://www.sparkfun.com/search/results?term=QWiic+cables or https://www.amazon.com/dp/B08HQ1VSVL?psc=1&ref=ppx_yo2ov_dt_b_product_details. I used a short one to connect the sensor module to the ESP32 module. A second Qwiic cable with female jumpers was used to connect to the pins on the OLED.
 The cable wires have been color coded to red, black, blue and yellow. Additionally, the female Qwiic connector features a basic 1mm pitch, while the female hookup pins can easily connect to a standard 0.1" male connector.
 
 All Qwiic cables have the following color scheme and arrangement:
