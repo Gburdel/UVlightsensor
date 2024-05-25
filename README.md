@@ -11,7 +11,7 @@ The UV sensor assembly mounted inside a "black box" with an OLED display, batter
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/f127e40c-00cd-446c-9e9d-424988e7fd5d)
 
-The Sparkfun UV sensor, https://www.sparkfun.com/products/23517 or https://www.amazon.com/dp/B0CQHQTQ8R?psc=1&ref=ppx_yo2ov_dt_b_product_details and the QWIIC Pocket Development Board, https://www.sparkfun.com/products/22925 or https://www.amazon.com/dp/B0CL6GGT7Q?psc=1&ref=ppx_yo2ov_dt_b_product_details can be bolted together using standoffs. In this bare board only configuration a USB cable is required for power. The USB cable can print sensor data over the USB virtual serial port to a PC running a terminal application program such as the serial monitor in the Ardruino IDE, TeraTerm, or RealTerm. I prever plastic standoffs and screws to avoid the posiblitly of larger screws shorting things out on the PCB. I found this standoff set handy https://www.amazon.com/dp/B0B5LTQXX8?psc=1&ref=ppx_yo2ov_dt_b_product_details
+The Sparkfun UV sensor, https://www.sparkfun.com/products/23517 or https://www.amazon.com/dp/B0CQHQTQ8R?psc=1&ref=ppx_yo2ov_dt_b_product_details and the QWIIC Pocket Development Board, https://www.sparkfun.com/products/22925 or https://www.amazon.com/dp/B0CL6GGT7Q?psc=1&ref=ppx_yo2ov_dt_b_product_details can be bolted together using standoffs. Note: Sparkfun only has free shipping for a $100 order. In this bare board only configuration a USB cable is required for power. The USB cable can print sensor data over the USB virtual serial port to a PC running a terminal application program such as the serial monitor in the Ardruino IDE, TeraTerm, or RealTerm. I prever plastic standoffs and screws to avoid the posiblitly of larger screws shorting things out on the PCB. I found this standoff set handy https://www.amazon.com/dp/B0B5LTQXX8?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
 # Adding an OLED display for standalone operation
 
@@ -25,6 +25,7 @@ Note the OLED module comes set with a jumper to use I2C address 0x3C (and not 0x
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/cb358408-6615-45a0-9e63-4a8c9b5b8d40)
 
-View inside the black box case. Note the small battery on the right. It comes with a JST connector that plugs into the ESP32 module. The module includes a charger circuit and it will automaticaly charge the small lithuim battery when a USB C cable is attached (and the power switch is on.
+# Mounting the Parts in a Case
+View inside the black box case. Note the small lithium battery on the right.  It comes with a JST connector that plugs into the ESP32 module. The module includes a charger circuit and it will automaticaly charge the small lithuim battery when a USB C cable is attached (and the power switch is on. The power switch is on the left side of the case.
  
  
