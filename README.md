@@ -24,7 +24,7 @@ The cable wires have been color coded to red, black, blue and yellow. Additional
 
 All Qwiic cables have the following color scheme and arrangement:
 
-Black = GND
+- Black = GND
 - Red = 3.3V DC
 - Blue = SDA (I2C data signal)
 - Yellow = SCL (I2C clock)
