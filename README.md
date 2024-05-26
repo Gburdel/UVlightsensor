@@ -5,7 +5,8 @@ For about the same price as a UV flashlight, you can build a UV light sensor tha
 
 # A battery powered version with an OLED display
 
-![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/379d6123-ef0e-42c3-8b4f-8297a05cc6cc)
+![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/3706eee4-f3e6-4e09-88e4-e9e2db6f55e4)
+
 
 
 
