@@ -66,7 +66,8 @@ To fix it using the hardware alternative instead of this software fix you could 
 
 Use this source code in your sketch after installing and patching the libraries:
 
-\\\/*
+///
+/*
   Using the AMS AS7331 Spectral UV Sensor in Continuous (CONT) Mode.
 
   This example shows how operate the AS7331 in CONT mode. The break time
@@ -214,7 +215,7 @@ void loop() {
 void dataReadyInterrupt() {
   newDataReady = true;
 }
-\\\
+///
 
 
 
