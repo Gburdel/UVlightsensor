@@ -60,18 +60,9 @@ The example code prints data to the USB virtual serial port, but when no USB cab
 
 The shortest and easiest to understand software fix for the Amazon Hoysund alternate OLED default I2C address is to edit the library include file  “qwiic_oled_1in3.h”. The path on my setup was something like this:
 Documents\Arduino\libraries\SparkFun_Qwiic_OLED_Arduino_Library\src\qwiic_oled_1in3.h
-Find this line:
-{
-      default_address = kOLED1in3DefaultAddress;
-};
+Find this line: "default_address = kOLED1in3DefaultAddress;". Then change it to: "default_address = kOLED1in3AltAddress;"
 
-And change it to:
-
-{
-        default_address = kOLED1in3AltAddress;
-};
-
-To fix it using the hardware alternative instead of software you could desolder and move the jumper on the Hoysund OLED board from “3C” to “3D”
+To fix it using the hardware alternative instead of this software fix you could desolder and move the jumper on the Hoysund OLED board from “3C” to “3D”
 
 Use this source code in your sketch after installing and patching the libraries:
 
