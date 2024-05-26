@@ -56,6 +56,26 @@ All Qwiic cables have the following color scheme and arrangement:
 - Yellow = SCL (I2C clock)
 # Software Development
 Install the Arduino IDE on your PC and then using Board Manager add the ExpressIf ESP32 board package so that the IDE has support that allows you to select the “SparkFun Qwiic Pocket Development Board - ESP32-C6” as your board. Once the board is selected, pick the COM port to use. See https://docs.sparkfun.com/SparkFun_Qwiic_Pocket_Dev_Board_ESP32_C6/software_setup/ for more details. Then you need to install the libraries (use Tools-> Manage Libraries) search for and install the "Sparkfun UV sensor AS7331" and if you are adding the OLED install the "Sparkfun QWIIC OLED" library. 
-The example code prints data to the USB virtual serial port, but when no USB cable is attached the Serial function hangs. If you are running standalone with an OLED and battery with no USB cable attached, under Tools disable the "USB CDC on boot" option, then compile and download.
+The example code prints data to the USB virtual serial port, but when no USB cable is attached the Serial function hangs. If you are running standalone with an OLED and battery with no USB cable attached, under Tools disable the "USB CDC on boot" option, then compile and download. 
+
+The shortest and easiest to understand software fix for the Amazon Hoysund alternate OLED default I2C address is to edit the library include file  “qwiic_oled_1in3.h”. The path on my setup was something like this:
+Documents\Arduino\libraries\SparkFun_Qwiic_OLED_Arduino_Library\src\qwiic_oled_1in3.h
+Find this line:
+{
+      default_address = kOLED1in3DefaultAddress;
+};
+
+And change it to:
+
+{
+        default_address = kOLED1in3AltAddress;
+};
+
+To fix it using the hardware alternative instead of software you could desolder and move the jumper on the Hoysund OLED board from “3C” to “3D”
+
+Use this source code in your sketch after installing and patching the libraries:
+
+
+
 
  
