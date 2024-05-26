@@ -222,6 +222,7 @@ void dataReadyInterrupt() {
 }
 ```
 
+Make a new sketch in the Arduino IDE, clear it out, click on the square icon on the code block above to copy the code, and paste it into the IDE editor. Source code files and a zip are also included.
 
 
  
