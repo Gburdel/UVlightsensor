@@ -4,7 +4,9 @@ Ultraviolet UVA, UVB, and UVC Light Sensor
 For about the same price as a UV flashlight, you can build a UV light sensor that measures UV light output at the three standard UVA (LW) UVB (MW) and UVC (SW) wavelengths. Beginning level knowledge of electronics and microprocessors is required. The Arduino IDE is used to program the ESP32 processor module via a USB C cable. All code is provided, but the IDE must be used to compile and upload the code to the processor. Soldering of one wire is required, but other parts plug together using Qwiic cable connectors.
 
 # A battery powered version with an OLED display
-![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/a0a5055c-a908-45f3-a7c6-1d1490ccd8c9)
+
+![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/379d6123-ef0e-42c3-8b4f-8297a05cc6cc)
+
 
 
 The UV sensor assembly mounted inside a plastic "black box" with an OLED display, battery, and power switch for portable operation. A C8 LW UV flashlight is pointed at the sensor. The sensor uses a 2-wire I2C digital interface, so a microprocessor running software is needed to read out and print the data. Here is a link to the plastic box from Amazon https://www.amazon.com/dp/B07Q14K8YT?ref=ppx_yo2ov_dt_b_product_details&th=1 (mine was 3.62 x 2.28 x 1.26 size). This was used for the power switch, https://www.amazon.com/dp/B07MYRWFFW?psc=1&ref=ppx_yo2ov_dt_b_product_details . The battery from Sparkfun comes with a JST connector that fits the one on the ESP32 board, https://www.sparkfun.com/products/13853 or perhaps a larger one. Mounting holes need to be drilled out on the plastic case and a rectangle cut out for the OLED display area. Another option would be to design and use a 3D printer to make a case.
