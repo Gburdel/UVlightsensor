@@ -31,6 +31,11 @@ Sparkfun has a Qwicc OLED but it is on backorder https://www.sparkfun.com/produc
 
 Note in the image above that the OLED module comes with a jumper set to use I2C address 0x3C (and not 0x3D like Sparkfun's out of stock OLED). It works using the Sparkfun Qwiic OLED library driver once the address is changed. I had to carefully enlarge the mounting holes a bit in the OLED and add a small spacer to keep pressure off of the glass. Be careful, the glass is very thin and it is easy to crack the glass and destroy the OLED if you put pressure on it.
 
+# Adding a 3.7V Lithium Battery for standalone operation without a USB C cable
+
+A 3.7 volt Lituim battery with a JST connector will plug into the processor board, run the device standalone, and recharge the battery when a USB C cable is attached.
+Sparkfun has several options https://www.sparkfun.com/search/results?term=jst+lithium+battery. They can also be found at Amazon https://www.amazon.com/s?k=jst+lithium+batteries&i=toys-and-games&rh=n%3A165793011%2Cp_n_feature_two_browse-bin%3A23534446011%2Cp_n_feature_seven_browse-bin%3A64613661011%2Cp_n_feature_seventeen_browse-bin%3A23568374011&dc&crid=10E7UCI1ERO6A&qid=1716750012&rnid=10467359011&sprefix=JST+lithuim+batt%2Caps%2C109&ref=sr_nr_p_n_feature_seventeen_browse-bin_1&ds=v1%3AftxJz0WyAGK7GWcGj2c%2FDgT0o5DGM7bj%2B74I3Arb1LE
+
 # Mounting the Parts in a Case
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/cb358408-6615-45a0-9e63-4a8c9b5b8d40)
