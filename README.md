@@ -34,8 +34,7 @@ Note in the image above that the OLED module comes with a jumper set to use I2C 
 # Adding a 3.7V Lithium Battery with a JST connector for standalone operation without a USB C cable
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/efbea552-7464-4a7b-b264-5970e7e16b2a)
 
-A 3.7 volt Lituim battery with a JST connector will plug into the processor board, run the device standalone, and recharge the battery when a USB C cable is attached.
-Sparkfun has several options https://www.sparkfun.com/search/results?term=jst+lithium+battery. They can also be found at Amazon https://www.amazon.com/s?k=jst+lithium+batteries&i=toys-and-games&rh=n%3A165793011%2Cp_n_feature_two_browse-bin%3A23534446011%2Cp_n_feature_seven_browse-bin%3A64613661011%2Cp_n_feature_seventeen_browse-bin%3A23568374011&dc&crid=10E7UCI1ERO6A&qid=1716750012&rnid=10467359011&sprefix=JST+lithuim+batt%2Caps%2C109&ref=sr_nr_p_n_feature_seventeen_browse-bin_1&ds=v1%3AftxJz0WyAGK7GWcGj2c%2FDgT0o5DGM7bj%2B74I3Arb1LE
+A 3.7 volt Lituim battery with a JST connector will plug into the processor board, run the device standalone, and recharge the battery when a USB C cable is attached. A yellow LED on the processor board indicates the battery is charging and it turns off when the battery is full charged. Sparkfun has several battery options https://www.sparkfun.com/search/results?term=jst+lithium+battery. They can also be found at Amazon https://www.amazon.com/s?k=jst+lithium+batteries&i=toys-and-games&rh=n%3A165793011%2Cp_n_feature_two_browse-bin%3A23534446011%2Cp_n_feature_seven_browse-bin%3A64613661011%2Cp_n_feature_seventeen_browse-bin%3A23568374011&dc&crid=10E7UCI1ERO6A&qid=1716750012&rnid=10467359011&sprefix=JST+lithuim+batt%2Caps%2C109&ref=sr_nr_p_n_feature_seventeen_browse-bin_1&ds=v1%3AftxJz0WyAGK7GWcGj2c%2FDgT0o5DGM7bj%2B74I3Arb1LE
 
 # Mounting the Parts in a Case
 
