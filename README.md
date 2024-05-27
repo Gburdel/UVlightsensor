@@ -228,10 +228,8 @@ void dataReadyInterrupt() {
 }
 ```
 
-Make a new sketch in the Arduino IDE, clear it out, click on the square icon on the code block above to copy the code, and paste it into the IDE editor. Source code files and a zip are also included.
+Make a new sketch in the Arduino IDE, clear it out, click on the square icon on the code block above to copy the code, and paste it into the IDE editor. Source code files and a zip are also included for those that want to use that alternative.
 
-## Parts Needed
 
-Here is a copy of everything I needed from my Amazon shopping cart to make the standalone sensor module in a case with a battery: https://www.amazon.com/hz/wishlist/ls/1359G3EURTYWQ?ref_=wl_share
 
  
