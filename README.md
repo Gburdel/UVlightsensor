@@ -77,7 +77,7 @@ Find this line: "default_address = kOLED1in3DefaultAddress;". Then change it to:
 
 To fix it using the hardware alternative instead of this software fix you could desolder and move the jumper on the Hoysund OLED board from “3C” to “3D”
 
-Use this source code that adds OLED output in your sketch after installing and patching the libraries:
+Use this source code below that adds OLED output in your sketch after installing and patching the libraries:
 
 ```
 /*
@@ -230,7 +230,7 @@ void dataReadyInterrupt() {
 }
 ```
 
-Make a new sketch in the Arduino IDE, clear it out, click on the square icon on the code block above to copy the code, and paste it into the IDE editor. Source code files and a zip are also included for those that want to use that alternative.
+Make a new sketch in the Arduino IDE, clear it out, click on the square icon on the code block above to copy the code, and paste it into the IDE editor. Source code files and a zip are also included for those that want to use that alternative. Compile and upload. Output should appear on the display. In case nothing appears on the display watch for a blue flash on the LED on the ESP32 board at startup. If the LED blinks and nothing appears on the display, something is likely incorrect on the OLED wiring.
 
 
 
