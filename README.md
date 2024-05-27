@@ -117,7 +117,7 @@ SfeAS7331ArdI2C myUVSensor;
 const uint8_t interruptPin = 4;
 volatile bool newDataReady = false;
 #include <SparkFun_Qwiic_OLED.h>      //http://librarymanager/All#SparkFun_Qwiic_OLED
- //not Sparkfun's Qwiic1in3OLED this Amazon Hoysund one uses I2C address 0x3C
+ //not Sparkfun's Qwiic1in3OLED this Amazon Hoysond one uses I2C address 0x3C
 
 Qwiic1in3OLED myOLED;
 
