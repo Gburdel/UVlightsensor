@@ -1,7 +1,7 @@
 # UVlightsensor
 Ultraviolet UVA, UVB, and UVC Light Sensor
 
-For about the same price as a UV flashlight, you can build a UV light sensor that measures UV light output at the three standard UVA (LW) UVB (MW) and UVC (SW) wavelengths. Beginning level knowledge of electronics and microprocessors is required. The Arduino IDE is used to program the ESP32 processor module via a USB C cable. All code is provided, but the IDE must be used to compile and upload the code to the processor. Soldering of one wire is required, but other parts plug together using Qwiic cable connectors.
+For about the same price as a UV flashlight, you can build a UV light sensor that measures UV light output at the three standard UVA (LW) UVB (MW) and UVC (SW) wavelengths. Beginning level knowledge of electronics and microprocessors is required. The Arduino IDE is used to program the ESP32 processor module via a USB C cable. All code is provided, but the IDE must be used to compile and upload the code to the processor. Soldering of one wire is required, but other parts plug together using Qwiic cable connectors. To mount it in the plastic case some drilling and cutting is required.
 
 # A battery powered version with an OLED display
 
