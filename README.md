@@ -43,7 +43,13 @@ A 3.7 volt Lituim battery with a JST connector will plug into the processor boar
 
 View inside the black box case. Note the small lithium battery on the right. The battery was attached using sticky back Velcro.  It comes with a JST connector that plugs into the ESP32 module. The module includes a charger circuit, and it will automatically charge the small lithium battery when a USB C cable is attached (and the power switch is on). The power switch is on the left side of the case.
 
-# Hardware Assembly 
+# Hardware Used 
+## Parts Needed
+
+Here is a copy of everything I needed from my Amazon shopping cart to make the standalone sensor module in a case with a battery: https://www.amazon.com/hz/wishlist/ls/1359G3EURTYWQ?ref_=wl_share
+
+## Assembly
+
 A short Qwiic cable attaches the sensor board to the processor board. You also to solder one jumper wire from UV sensor board INT (interrupt pin) to the processor board IO4 pin as the UV sensor code example uses pin 4 for the interrupt (the sensor sets an interrupt signal when a new value is available - the program will crash without this wire!). You will also need a USB C cable (if you don’t have one – one does not come with the processor board). Optional Standoffs, nuts and bolts if you want to attach the two boards. The female Qwiic cable is used to attach from the sensor board's second Qwiic connector to the pins on the OLED.
 
 ## Using Sparkfun Qwiic cables to connect sensor modules to processor modules
@@ -224,7 +230,7 @@ void dataReadyInterrupt() {
 
 Make a new sketch in the Arduino IDE, clear it out, click on the square icon on the code block above to copy the code, and paste it into the IDE editor. Source code files and a zip are also included.
 
-# Parts Needed
+## Parts Needed
 
 Here is a copy of everything I needed from my Amazon shopping cart to make the standalone sensor module in a case with a battery: https://www.amazon.com/hz/wishlist/ls/1359G3EURTYWQ?ref_=wl_share
 
