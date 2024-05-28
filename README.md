@@ -232,6 +232,121 @@ void dataReadyInterrupt() {
 
 Make a new sketch in the Arduino IDE, clear it out, click on the square icon on the code block above to copy the code, and paste it into the IDE editor. Source code files and a zip are also included for those that want to use that alternative. Compile and upload. Output should appear on the display. In case nothing appears on the display watch for a blue flash on the LED on the ESP32 board at startup. If the LED blinks and nothing appears on the display, something is likely incorrect on the OLED wiring.
 
+# Using a PC or Android Phone for power and data display
+
+If you don't mind always having a USB C cable plugged in, you can skip the OLED and battery and put it in a smaller case like this one shown below: https://www.amazon.com/dp/B0BY2CZ7LB?ref=ppx_yo2ov_dt_b_product_details&th=1
+
+![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/053ef636-7c20-4409-9f3c-5d159f10a34b)
+
+As seen bekow, the modules are mounted inside on standoffs with longer standoffs on the UV sensor board to place the sensor near the opening in the top of the small case.
+
+![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/121a4b3b-81d7-4024-a297-0258620a4c64)
 
 
+For this use, the code has no OLED display output, but you will need to set the Tools -> enable the "USB CDC on boot" option, then compile and download. USB CDC is the protocol used to send serial data over the USB cable. The PC or Android Phone with need one of the free "Terminal Emulator" programs. The terminal emulator will need to be setup with the correct baud rate and USB serial port. The data output from prints will them show up in the window on the PC or Andriod phone. iPhones do not support other non Apple USB devices like this without a lot of work that would also likely void the warranty. 
+```
+/*
+  Using the AMS AS7331 Spectral UV Sensor in Continuous (CONT) Mode.
+
+  This example shows how operate the AS7331 in CONT mode. The break time
+  register sets the delay between measurements so that the processor can read
+  out the results without interfering with the ADC.
+
+  By: Alex Brudner
+  SparkFun Electronics
+  Date: 2023/11/27
+  SparkFun code, firmware, and software is released under the MIT License.            
+	Please see LICENSE.md for further details.
+
+  Hardware Connections:
+  IoT RedBoard --> AS7331
+  QWIIC --> QWIIC
+  26  --> INT
+
+  Serial.print it out at 115200 baud to serial monitor.
+
+  Feel like supporting our work? Buy a board from SparkFun!
+  https://www.sparkfun.com/products/23517 - Qwiic 1x1
+  https://www.sparkfun.com/products/23518 - Qwiic Mini
+*/
+
+#include <Arduino.h>
+#include <Wire.h>
+#include <SparkFun_AS7331.h>
+
+SfeAS7331ArdI2C myUVSensor;
+
+const uint8_t interruptPin = 4;
+volatile bool newDataReady = false;
+
+void setup() {
+  Serial.begin(115200);
+  while(!Serial){delay(100);}
+  Serial.println("UV Light Meter uW/cm2");
+
+  Wire.begin();
+
+  // Configure Interrupt.
+  pinMode(interruptPin, INPUT);
+  attachInterrupt(digitalPinToInterrupt(interruptPin), dataReadyInterrupt, RISING);
+
+  // Initialize sensor and run default setup.
+  if(myUVSensor.begin() == false) {
+    Serial.println("Sensor failed to begin. Please check your wiring!");
+    Serial.println("Halting...");
+    while(1);
+  }
+
+  Serial.println("Sensor began.");
+
+  // Set the delay between measurements so that the processor can read out the 
+  // results without interfering with the ADC.
+  // Set break time to 900us (112 * 8us) to account for the time it takes to poll data.
+  if(kSTkErrOk != myUVSensor.setBreakTime(112)) {
+    Serial.println("Sensor did not set break time properly.");
+    Serial.println("Halting...");
+    while(1);
+  }
+
+  // Set measurement mode and change device operating mode to measure.
+  if(myUVSensor.prepareMeasurement(MEAS_MODE_CONT) == false) {
+    Serial.println("Sensor did not get set properly.");
+    Serial.println("Spinning...");
+    while(1);
+  }
+
+  Serial.println("Set mode to continuous. Starting measurement...");
+
+  // Begin measurement.
+  if(kSTkErrOk != myUVSensor.setStartState(true))
+    Serial.println("Error starting reading!");
+
+}
+
+void loop() {
+
+  // If an interrupt has been generated...
+  if(newDataReady) {
+    newDataReady = false;
+
+    if(kSTkErrOk != myUVSensor.readAllUV())
+      Serial.println("Error reading UV.");
+  
+    Serial.print("\f"); //screen erase on some terminal emulators
+    Serial.println("\n\r  UV Light Meter uW/cm2\n\r      ");
+    Serial.print("  LW   ");
+    Serial.println(myUVSensor.getUVA());
+    Serial.print("  MW   ");
+    Serial.println(myUVSensor.getUVB());
+    Serial.print("  SW   ");
+    Serial.println(myUVSensor.getUVC());
+    Serial.print("\n\n\r");
+  }
+
+}
+
+void dataReadyInterrupt() {
+  newDataReady = true;
+}
+```
  
