@@ -234,6 +234,8 @@ Make a new sketch in the Arduino IDE, clear it out, click on the square icon on 
 
 # Using a PC or Android Phone for power and data display
 
+Here the light meter is running with a USB C cable to an Android phone. The phone powers it and displays the data. A SW LED flashlight is pointed at the sensor. The numbers are a bit blurry since they are changing fast in this long exposure time photo.
+
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/a7888b5e-ba87-48a7-9a59-68bfe60123e8)
 
 If you don't mind always having a USB C cable plugged in, you can skip the OLED and battery and put it in a smaller case like this one shown below: https://www.amazon.com/dp/B0BY2CZ7LB?ref=ppx_yo2ov_dt_b_product_details&th=1
