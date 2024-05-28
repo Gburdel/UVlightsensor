@@ -238,12 +238,12 @@ If you don't mind always having a USB C cable plugged in, you can skip the OLED 
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/053ef636-7c20-4409-9f3c-5d159f10a34b)
 
-As seen bekow, the modules are mounted inside on standoffs with longer standoffs on the UV sensor board to place the sensor near the opening in the top of the small case.
+As seen below, the modules are mounted inside on standoffs with longer standoffs on the UV sensor board to place the sensor near the opening in the top of the small case.
 
 ![image](https://github.com/Gburdel/UVlightsensor/assets/30203498/121a4b3b-81d7-4024-a297-0258620a4c64)
 
 
-For this use, the code has no OLED display output, but you will need to set the Tools -> enable the "USB CDC on boot" option, then compile and download. USB CDC is the protocol used to send serial data over the USB cable. The PC or Android Phone with need one of the free "Terminal Emulator" programs. The terminal emulator will need to be setup with the correct baud rate and USB serial port. The data output from prints will them show up in the window on the PC or Andriod phone. iPhones do not support other non Apple USB devices like this without a lot of work that would also likely void the warranty. 
+For this use, the code has no OLED display output, but you will need to set the Tools -> enable the "USB CDC on boot" option, then compile and download. USB CDC is the protocol used to send serial data over the USB cable. The PC or Android Phone with need one of the free "Terminal Emulator" programs. The terminal emulator will need to be setup with the correct baud rate and USB serial port. The data output from prints will them show up in the window on the PC or Android phone. iPhones do not support other non-Apple USB devices like this without a lot of work that would also likely void the warranty. 
 ```
 /*
   Using the AMS AS7331 Spectral UV Sensor in Continuous (CONT) Mode.
