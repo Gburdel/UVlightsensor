@@ -52,7 +52,7 @@ Here is a copy of everything I needed from my Amazon shopping cart to make the s
 
 ## Assembly
 
-A short Qwiic cable attaches the sensor board to the processor board. You also to solder one jumper wire from UV sensor board INT (interrupt pin) to the processor board IO4 pin as the UV sensor code example uses pin 4 for the interrupt (the sensor sets an interrupt signal when a new value is available - the program will crash without this wire!). You will also need a USB C cable (if you don’t have one – one does not come with the processor board). Optional Standoffs, nuts and bolts if you want to attach the two boards. The female Qwiic cable is used to attach from the sensor board's second Qwiic connector to the pins on the OLED.
+A short Qwiic cable attaches the sensor board to the processor board. You also have to solder one jumper wire from UV sensor board INT (interrupt pin) to the processor board IO4 pin as the UV sensor code example uses pin 4 for the interrupt (the sensor sets an interrupt signal when a new value is available - the program will crash without this wire!). You will also need a USB C cable (if you don’t have one – one does not come with the processor board). Optional Standoffs, nuts and bolts if you want to attach the two boards. The female Qwiic cable is used to attach from the sensor board's second Qwiic connector to the pins on the OLED.
 
 ## Using Sparkfun Qwiic cables to connect sensor modules to processor modules
 
