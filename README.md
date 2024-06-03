@@ -353,4 +353,11 @@ void dataReadyInterrupt() {
   newDataReady = true;
 }
 ```
-  
+# Ideas for Further Work and Enhancements
+
+If I was starting over, on the battery operated version, I would mount the boards on the case bottom, if possible. That way the screws would not show on the top of the case. An assortment of standoffs the proper size is needed for that to work.
+
+For a bit more money there are somewhat larger ESP32 boards with built-in displays. Some are color with higher resolution, so it could display plots over time or graphically display a crude spectral energy distribution.
+
+I am not sure that the existing library includes temperature compensation. It is possible to read temperature from the sensor. Not likely to matter much unless you are using it outside in very cold or very hot weather. 
+
